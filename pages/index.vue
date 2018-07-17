@@ -47,6 +47,7 @@ export default {
       addProfile: 'user/addProfile'
     }),
     submit() {
+      console.log(this.form)
       this.addProfile(this.form)
     }
   }
