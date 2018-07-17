@@ -27,6 +27,7 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 import AppLogo from '~/components/AppLogo.vue'
 export default {
   components: {
@@ -34,7 +35,6 @@ export default {
   },
   data () {
     return {
-      user: null,
       form: {
         user: '',
         pass: ''
@@ -43,8 +43,11 @@ export default {
     }
   },
   methods: {
+    ...mapActions({
+      addProfile: 'user/addProfile'
+    }),
     submit() {
-      this.user.push(this.form)
+      this.addProfile(this.form)
     }
   }
 }
