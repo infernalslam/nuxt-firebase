@@ -11,7 +11,6 @@ const getters = {
 
 const actions = {
   addProfile ({commit}, form) {
-    console.log(form)
     Users.push(form)
     // commit('FIREBASE_PUSH_DATA', form)
   }
