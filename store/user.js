@@ -19,18 +19,31 @@ const actions = {
 
 const mutations = {
   FIREBASE_PUSH_DATA (state, payload) {
-    // db.collection('users').get().then((snapshot) => {
-    //   console.log(snapshot)
-    // })
-    console.log(db)
     state.users.push(payload)
-    // Users.on('child_added', (data) => {
-    //   let item = data.val()
-    //   item.id = data.key
-    //   store.users.push(item)
-    // })
+  //   Users.on('child_added', (data) => {
+  //     let item = data.val()
+  //     item.id = data.key
+  //     state.users.push(item)
+  //   })
+  //   Users.on('value', (data) => {
+  //     let item = data.val()
+  //     item.id = data.key
+  //     state.users.push(...item)
+  //   })
   }
 }
+
+// triger event firebase
+// Users.on('child_added', (data) => {
+//   let item = data.val()
+//   item.id = data.key
+//   state.users.push(item)
+// })
+// Users.on('value', (data) => {
+//   let item = data.val()
+//   item.id = data.key
+//   state.users.push(...item)
+// })
 
 export default {
   namespaced: true,

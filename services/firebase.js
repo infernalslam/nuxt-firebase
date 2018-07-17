@@ -1,5 +1,5 @@
 import * as firebase from 'firebase'
-import 'firebase/database/dist/index.cjs'
+import 'firebase/database'
 let config = {
   apiKey: "AIzaSyCXQjw76GcHtKlmuoZD1HCAogBebNQdPgU",
   authDomain: "project-mint-89508.firebaseapp.com",

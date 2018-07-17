@@ -1,20 +1,5 @@
-import user from './user'
-
-// const store = () => ({
-//   modules: {
-//     user
-//   }
-// })
-
-// // const store = {
-// //   modules: {
-// //     user
-// //   }
-// // }
-
-// export default store
-
 import Vuex from 'vuex'
+import user from './user'
 
 const createStore = () => {
   return new Vuex.Store({
