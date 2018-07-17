@@ -28,7 +28,6 @@
 
 <script>
 import AppLogo from '~/components/AppLogo.vue'
-import firebase from 'firebase/app'
 export default {
   components: {
     AppLogo
@@ -47,19 +46,6 @@ export default {
     submit() {
       this.user.push(this.form)
     }
-  },
-  async mounted () {
-    this.user = firebase.database().ref('users') // craete database
-    this.user.on('value', (data) => {
-      let item = data.val()
-      item.id = data.key
-      this.list.push(...item)
-    })
-    this.user.on('child_added', (data) => {
-      let item = data.val()
-      item.id = data.key
-      this.list.push(item)
-    })
   }
 }
 </script>

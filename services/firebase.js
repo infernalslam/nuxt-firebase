@@ -1,6 +1,5 @@
-import firebase from 'firebase/app'
-// import Vue from 'vue'
-// import VueFire from 'vuefire'
+import * as firebase from 'firebase'
+import 'firebase/database/dist/index.cjs'
 let config = {
   apiKey: "AIzaSyCXQjw76GcHtKlmuoZD1HCAogBebNQdPgU",
   authDomain: "project-mint-89508.firebaseapp.com",
@@ -8,8 +7,8 @@ let config = {
   projectId: "project-mint-89508",
   storageBucket: "",
   messagingSenderId: "366768779688"
-  }
-firebase.initializeApp(config)
+}
+!firebase.apps.length ? firebase.initializeApp(config) : ''
 
-// Vue.use(VueFire)
+export const db = firebase.database()
 export default firebase
