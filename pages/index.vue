@@ -60,6 +60,11 @@ export default {
       item.id = data.key
       this.list.push(item)
     })
+    this.user.on('child_removed', function (data) {
+      let id = data.key
+      let index = this.list.findIndex(item => item.id === id)
+      this.list.splice(index, 1)
+    })
   }
 }
 </script>
