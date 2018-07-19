@@ -28,10 +28,14 @@
 
 <script>
 import { mapActions } from 'vuex'
+import firebase from 'firebase'
 import AppLogo from '~/components/AppLogo.vue'
 export default {
   components: {
     AppLogo
+  },
+  created () {
+    this.setUsers('setUsers', firebase.database().ref('users'))
   },
   data () {
     return {
@@ -44,11 +48,10 @@ export default {
   },
   methods: {
     ...mapActions({
-      addProfile: 'user/addProfile'
+      setUsers: 'user/setUsers'
     }),
     submit() {
-      console.log(this.form)
-      this.addProfile(this.form)
+      this.setUsers(this.form)
     }
   }
 }

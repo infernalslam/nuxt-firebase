@@ -23,7 +23,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    vendor: ['firebase'],
+    vendor: ['firebase', 'vuefire'],
     /*
     ** Run ESLint on save
     */
